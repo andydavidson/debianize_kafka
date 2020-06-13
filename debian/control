@@ -1,0 +1,16 @@
+Source: kafka
+Maintainer: Andy Davidson <andy@asteroidhq.com> 
+Section: net
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: 
+
+Package: kafka
+Architecture: all 
+Depends: default-jre, default-jdk, adduser 
+Version: 2.5.0 
+Description: Apache Kafka, A distributed streaming platform
+    This package installs Apache Kafka based on the instructions
+    on the page https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-debian-10
+    Except the bit about deleting topics, and we put the homedir
+    in /usr/local/kafka

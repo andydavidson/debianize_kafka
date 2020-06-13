@@ -1,0 +1,5 @@
+kafka (2.50) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- Andy Davidson <andy@buildstuff>  Sat, 13 Jun 2020 20:34:52 +0000

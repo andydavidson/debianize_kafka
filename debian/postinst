@@ -1,0 +1,8 @@
+#!/bin/bash
+
+/usr/sbin/adduser --system --home /usr/local/kafka kafka
+/bin/chown -R kafka /usr/local/kafka/*
+
+#DEBHELPER#
+
+exit 0 

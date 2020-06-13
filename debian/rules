@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+package = kafka
+
+%:
+	dh $@
+
+install: build
+	dh_clean
+	dh_installdirs
+	echo "Copying Kafka distribution"
+	# bin  config  libs  site-docs
+	mkdir -p ${CURDIR}/debian/${package}/usr/local/kafka
+	cp -r $(CURDIR)/bin $(CURDIR)/debian/$(package)/usr/local/kafka/.
+	cp -r $(CURDIR)/config $(CURDIR)/debian/$(package)/usr/local/kafka/.
+	cp -r $(CURDIR)/libs $(CURDIR)/debian/$(package)/usr/local/kafka/.
+	cp -r $(CURDIR)/site-docs $(CURDIR)/debian/$(package)/usr/local/kafka/.
+	echo "Finished copying folders"
+
+	echo "Adding config files"
+	mkdir -p ${CURDIR}/debian/${package}/etc/systemd/system
+	install -m644 zookeeper.service debian/${package}/etc/systemd/system/
+	install -m644 kafka.service debian/${package}/etc/systemd/system/
+	echo "Done"
+
+
