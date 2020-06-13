@@ -1,4 +1,4 @@
-# debianize_karfa
+# debianize_kafka
 
 The files I added to make a debian package of Kafka, 2.50
 
