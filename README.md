@@ -1,6 +1,6 @@
 # debianize_karfa
 
-The files I added to make a debian package of Karka, 2.50
+The files I added to make a debian package of Kafka, 2.50
 
 Download the binary tgz distrbution from Apache
 Then copy this directory over the top.
