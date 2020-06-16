@@ -3,6 +3,11 @@
 /usr/sbin/adduser --system --home /usr/local/kafka kafka
 /bin/chown -R kafka /usr/local/kafka
 
+# Move the default commit log (data directory) location
+/usr/bin/mkdir /var/lib/kafka-logs
+/bin/chown kafka:nogroup /var/lib/kafka-logs/
+/usr/bin/sed -i 's/^\(log\.dirs\s*=\s*\).*$/\1\/var\/lib\/kafka-logs/' /usr/local/kafka/config/server.properties
+
 #DEBHELPER#
 
 exit 0 
