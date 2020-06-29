@@ -8,6 +8,11 @@
 /bin/chown kafka:nogroup /var/lib/kafka-logs/
 /usr/bin/sed -i 's/^\(log\.dirs\s*=\s*\).*$/\1\/var\/lib\/kafka-logs/' /usr/local/kafka/config/server.properties
 
+# Move the default zookeeper log (data directory) location
+/usr/bin/mkdir /var/lib/zookeeper
+/bin/chown kafka:nogroup /var/lib/zookeeper
+/usr/bin/sed -i 's/^\(dataDir\s*=\s*\).*$/\1\/var\/lib\/zookeeper/' /usr/local/kafka/config/zookeeper.properties
+
 #DEBHELPER#
 
 exit 0 

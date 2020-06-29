@@ -1,3 +1,10 @@
+kafka (2.50.0.1) UNRELEASED; urgency=low
+
+  * Move zookeeper datadir to perm storage
+
+ -- Andy Davidson <andy@buildstuff>  Sat, 13 Jun 2020 20:34:52 +0000
+
+
 kafka (2.50) UNRELEASED; urgency=medium
 
   * Initial release. (Closes: #XXXXXX)
